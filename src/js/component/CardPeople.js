@@ -53,7 +53,7 @@ export const CardPeople = () => {
   return (
     <div className="row">
       {store.people.map((person, index) => (
-        <div className="col-4 mb-4" key={index}>
+        <div className="col-4 mb-4 card card-people" key={index}>
           <div className="card">
             <img
               src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
