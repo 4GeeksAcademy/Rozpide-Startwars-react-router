@@ -32,9 +32,28 @@ const getState = ({ getStore, getActions, setStore }) => {
                 const store = getStore();
                 setStore({ favorites: store.favorites.filter(fav => fav !== item) });
             },
+            // Función para cargar datos desde la API de favoritos 
+            fetchFavorites: async () => {
+                const response = await fetch("https://www.swapi.tech/api/people");
+                const data = await response.json();
+                setStore({ favorites: data.results });
+            },
+
             loadSomeData: () => {
-                // Puedes definir esta función para cargar algunos datos iniciales si se necesitas
+                // podemos definir esta función para cargar algunos datos iniciales si se necesitan en el store global al inicio de la aplicación.
+                console.log("Cargando datos...desde FLUX"); 
+                getActions().fetchPeople();
+                getActions().fetchVehicles();
+                getActions().fetchPlanets();
+                
+            
+
             }
+        
+            
+           
+
+            
         }
     };
 };

@@ -22,8 +22,8 @@ const injectContext = PassedComponent => {
         );
 
         useEffect(() => {
-            // Puedes realizar peticiones de datos aquí usando actions
-            state.actions.loadSomeData();
+            // Puedes realizar peticiones de datos aquí usando actions y acceder a ellos fácilmente usando el contexto store.
+            state.actions.loadSomeData();// No olvides ejecutar esta función al inicio para cargar los datos en el store y poder acceder a ellos.
         }, []);
 
         // El valor inicial del contexto ya no es null, sino el estado actual de este componente.
