@@ -9,8 +9,9 @@ import {Footer} from "./component/footer";
 import {Demo} from "./views/demo";
 import {Single} from "./views/single";
 import {Favorites} from "./views/favorites";
-import { FavoritesView } from "./views/FavoritesViews";
+import {FavoritesView } from "./views/FavoritesViews";
 import {Details} from "./views/details";
+
 
 
 
