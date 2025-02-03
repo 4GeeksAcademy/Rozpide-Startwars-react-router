@@ -66,25 +66,35 @@ const Home = () => {
     actions.fetchVehicles();
     actions.fetchPlanets();
   }, []);
-
+  const containerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px"
+  };
   return (
-    <div className="container mt-5">
+    <div className="container mt-1">
       <h1>Star Wars Database</h1>
-      <div className="d-flex justify-content-between mb-3">
+      <div className="d-flex flex-wrap mb-2">
         <h2>People</h2>
         <Favorites />
       </div>
-      <CardPeople />
-      <div className="d-flex justify-content-between mb-3">
+      <div className="d-flex overflow-auto">
+        <CardPeople />
+      </div>
+      <div className="d-flex flex-wrap mb-3">
         <h2>Vehicles</h2>
         <Favorites />
       </div>
-      <CardVehicles />
-      <div className="d-flex justify-content-between mb-3">
+      <div className="d-flex overflow-auto">
+        <CardVehicles />
+      </div>
+      <div className="d-flex flex-wrap mb-3">
         <h2>Planets</h2>
         <Favorites />
       </div>
-      <CardPlanets />
+      <div className="d-flex overflow-auto">
+        <CardPlanets />
+      </div>
     </div>
   );
 };

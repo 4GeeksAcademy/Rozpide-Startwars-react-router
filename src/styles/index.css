@@ -166,7 +166,7 @@
 /* Cards Styles */
 .card-container {
   display: flex;
-  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  overflow-x:auto; /* Permitir desplazamiento horizontal */
   white-space: nowrap;
   padding: 20px 0;
 }
@@ -184,4 +184,9 @@
 
 .card-body {
   text-align: center;
+}
+
+.card-people {
+  display: flex;
+  flex-wrap: nowrap;
 }
