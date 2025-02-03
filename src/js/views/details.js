@@ -17,6 +17,8 @@ const Details = () => {
       <p>Gender: {item.gender}</p>
       <p>Model: {item.model}</p>
       <p>Climate: {item.climate}</p>
+      <p>Population: {item.population}</p>
+      <p>Eye color: {item.eye_color}</p>
       {/* Agregar más detalles según si es persona, vehículo o planeta */}
     </div>
   );

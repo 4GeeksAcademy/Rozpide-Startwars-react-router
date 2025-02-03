@@ -27,12 +27,3 @@ root.render(
 );
 //render your react application
 root.render(<Layout/>)
-/*import React from 'react';
-import ReactDOM from 'react-dom';
-import injectContext from './store/appContext';
-import Layout from './layout';
-import { BrowserRouter } from 'react-router-dom';
-
-const App = injectContext(Layout);
-
-ReactDOM.render(<App />, document.querySelector("#app"));*/

@@ -54,7 +54,7 @@ import { Context } from "../store/appContext";
 import { CardPeople } from "../component/CardPeople";
 import { CardVehicles } from "../component/CardVehicles";
 import { CardPlanets } from "../component/CardPlanets";
-import { Favorites } from "./favorites"; // Actualización de la ruta de importación
+import { Favorites } from "./favorites"; // Actualización de la ruta de importación que por error estaba en el archivo incorrecto
 
 const Home = () => {
   const { actions } = useContext(Context);
@@ -88,4 +88,3 @@ const Home = () => {
 };
 
 export { Home };
-
