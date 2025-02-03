@@ -9,6 +9,7 @@ import {Footer} from "./component/footer";
 import {Demo} from "./views/demo";
 import {Single} from "./views/single";
 import {Favorites} from "./views/favorites";
+import { FavoritesView } from "./views/FavoritesViews";
 import {Details} from "./views/details";
 
 
@@ -25,6 +26,7 @@ const Layout = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/demo" element={<Demo />} />
                         <Route path="/single/:theid" element={<Single />} />
+                        <Route path="/favorites" element={<FavoritesView />} />
                         <Route path="/favorites" element={<Favorites />} />
                         <Route path="/details/:id" element={<Details />} />
                         <Route path="*" element={<h1>Not found!</h1>} />
