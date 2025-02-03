@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+/*import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
 const Favorites = () => {
@@ -30,6 +30,34 @@ const Favorites = () => {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+export { Favorites };*/
+
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+
+const Favorites = () => {
+  const { store, actions } = useContext(Context);
+
+  return (
+    <div className="favorites-dropdown">
+      <button className="btn btn-primary">
+        Favorites <span className="badge bg-secondary">{store.favorites.length}</span>
+      </button>
+      <div className="favorites-dropdown-content">
+        {store.favorites.length === 0 ? (
+          <span className="dropdown-item">No favorites yet</span>
+        ) : (
+          store.favorites.map((item, index) => (
+            <a key={index} href="#">
+              {item.name}
+            </a>
+          ))
+        )}
       </div>
     </div>
   );
