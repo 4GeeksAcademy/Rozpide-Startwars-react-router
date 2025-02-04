@@ -249,4 +249,4 @@ export const Favorites = () => {
   );
 };
 
- ;
+ 

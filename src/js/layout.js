@@ -11,6 +11,7 @@ import {Single} from "./views/single";
 import {Favorites} from "./views/favorites";
 import {FavoritesView } from "./views/FavoritesViews";
 import {Details} from "./views/details";
+import { NewDetails } from "./views/newDetails";
 
 
 
@@ -30,6 +31,7 @@ const Layout = () => {
                         <Route path="/favorites" element={<FavoritesView />} />
                         <Route path="/favorites" element={<Favorites />} />
                         <Route path="/details/:id" element={<Details />} />
+                        <Route path="dretails/:category/:id" element={<NewDetails />} />
                         <Route path="*" element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
