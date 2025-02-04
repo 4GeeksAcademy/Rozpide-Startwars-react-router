@@ -51,9 +51,9 @@ export const CardPeople = () => {
   };
 
   return (
-    <div className=" container row">
+    <div className=" d-flex overflow-auto">
       {store.people.map((person, index) => (
-        <div className="col-12 mb-2 card card-people" key={index}>
+        <div className="col-12 mb-2 card card-people mx-2" key={index}>
           <div className="card">
             <img
               src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}

@@ -51,10 +51,10 @@ export const CardPlanets = () => {
   };
 
   return (
-    <div className="row">
+    <div className="d-flex overflow-auto">
       {store.planets.map((planet, index) => (
         <div className="col-4 mb-4" key={index}>
-          <div className="card">
+          <div className="card mx-2">
             <img
               src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
               className="card-img-top"
