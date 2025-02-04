@@ -48,56 +48,58 @@ const Home = () => {
 
 export { Home };*/
 /*------------------------------------*/
-
-
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { CardPeople } from "../component/CardPeople";
 import { CardVehicles } from "../component/CardVehicles";
 import { CardPlanets } from "../component/CardPlanets";
-import { Favorites } from "./favorites"; // Actualización de la ruta de importación que por error estaba en el archivo incorrecto
 
 const Home = () => {
+  if (localStorage.getItem("favorites") === null) {
+    localStorage.setItem("favorites", JSON.stringify([]));
+  }
+  else {
+    const favorites = JSON.parse(localStorage.getItem("favorites"));
+    console.log(favorites);
+  }
   const { actions } = useContext(Context);
+
 
   useEffect(() => {
     actions.fetchPeople();
     actions.fetchVehicles();
     actions.fetchPlanets();
   }, []);
-  const containerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "20px"
-  };
+
   return (
-    <div className="container mt-1">
+    <div className="container mt-5">
       <h1>Star Wars Database</h1>
-      <div className="d-flex flex-wrap mb-2">
+      <div className="d-flex justify-content-between mb-3">
         <h2>People</h2>
-        <Favorites />
+        <Link to="/favorites" className="btn btn-primary">
+          Favorites
+        </Link>
       </div>
-      <div className="d-flex overflow-auto">
-        <CardPeople />
-      </div>
-      <div className="d-flex flex-wrap mb-3">
+      <CardPeople />
+      <div className="d-flex justify-content-between mb-3">
         <h2>Vehicles</h2>
-        <Favorites />
+        <Link to="/favorites" className="btn btn-primary" />
       </div>
-      <div className="d-flex overflow-auto">
-        <CardVehicles />
-      </div>
-      <div className="d-flex flex-wrap mb-3">
+      <CardVehicles />
+      <div className="d-flex justify-content-between mb-3">
         <h2>Planets</h2>
-        <Favorites />
+        <Link to="/favorites" className="btn btn-primary" />
       </div>
-      <div className="d-flex overflow-auto">
-        <CardPlanets />
-      </div>
+      <CardPlanets />
     </div>
   );
 };
 
 export { Home };
+
+
+/*------------------------------------*/
+
+
 

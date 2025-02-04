@@ -191,7 +191,7 @@ import React, { useContext, useState, useRef } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-const Favorites = () => {
+export const Favorites = () => {
   const { store, actions } = useContext(Context);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -249,4 +249,4 @@ const Favorites = () => {
   );
 };
 
-export { Favorites };
+ ;
