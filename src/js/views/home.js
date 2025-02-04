@@ -77,19 +77,17 @@ const Home = () => {
       <h1>Star Wars Database</h1>
       <div className="d-flex justify-content-between mb-3">
         <h2>People</h2>
-        <Link to="/favorites" className="btn btn-primary">
-          Favorites
-        </Link>
+        
       </div>
       <CardPeople />
       <div className="d-flex justify-content-between mb-3">
         <h2>Vehicles</h2>
-        <Link to="/favorites" className="btn btn-primary" />
+        
       </div>
       <CardVehicles />
       <div className="d-flex justify-content-between mb-3">
         <h2>Planets</h2>
-        <Link to="/favorites" className="btn btn-primary" />
+        
       </div>
       <CardPlanets />
     </div>
