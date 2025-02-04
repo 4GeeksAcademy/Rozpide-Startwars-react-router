@@ -22,7 +22,7 @@ const FavoritesView = () => {
                     : store.starships.find((vehicles) => vehicles.name === item.name)
                     ? "starships"
                     : "planets"
-                }/${index + 1}.jpg`}
+                }/${index + 5}.jpg`}
                 className="card-img-top"
                 alt={item.name}
               />
@@ -44,3 +44,9 @@ const FavoritesView = () => {
 };
 
 export { FavoritesView };
+/*----------------------------------------------*/
+
+
+/*----------------------------------------------*/
+
+

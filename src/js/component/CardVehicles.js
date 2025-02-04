@@ -1,6 +1,6 @@
 
-/*----------------------------------------------*/
-import React, { useContext, useState } from "react";
+/*---------COMENTADO PORQUE DA ERRORES DE MOMENTO--------*/
+/*import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
@@ -51,7 +51,9 @@ export const CardVehicles = () => {
       ))}
     </div>
   );
-};
+};*/
+/*---ELIMINE TAMBIEN EL RASTRO EN LAYOUT Y EN OTRAS------*/
+
 
 
 

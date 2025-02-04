@@ -52,7 +52,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { CardPeople } from "../component/CardPeople";
-import { CardVehicles } from "../component/CardVehicles";
+
 import { CardPlanets } from "../component/CardPlanets";
 
 const Home = () => {
@@ -80,11 +80,7 @@ const Home = () => {
         
       </div>
       <CardPeople />
-      <div className="d-flex justify-content-between mb-3">
-        <h2>starships</h2>
-        
-      </div>
-      <CardVehicles />
+      
       <div className="d-flex justify-content-between mb-3">
         <h2>Planets</h2>
         
