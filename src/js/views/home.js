@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { CardPeople } from "../component/CardPeople";
-import { CardVehicles } from "../component/CardVehicles";
+import { Cardstarships } from "../component/Cardstarships";
 import { CardPlanets } from "../component/CardPlanets";
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     actions.fetchPeople();
-    actions.fetchVehicles();
+    actions.fetchstarships();
     actions.fetchPlanets();
   }, []);
 
@@ -33,10 +33,10 @@ const Home = () => {
       </div>
       <CardPeople />
       <div className="d-flex justify-content-between mb-3">
-        <h2>Vehicles</h2>
+        <h2>starships</h2>
         <Link to="/favorites" className="btn btn-primary" />
       </div>
-      <CardVehicles />
+      <Cardstarships />
       <div className="d-flex justify-content-between mb-3">
         <h2>Planets</h2>
         <Link to="/favorites" className="btn btn-primary" />
@@ -68,7 +68,7 @@ const Home = () => {
 
   useEffect(() => {
     actions.fetchPeople();
-    actions.fetchVehicles();
+    actions.fetchstarships();
     actions.fetchPlanets();
   }, []);
 
@@ -81,7 +81,7 @@ const Home = () => {
       </div>
       <CardPeople />
       <div className="d-flex justify-content-between mb-3">
-        <h2>Vehicles</h2>
+        <h2>starships</h2>
         
       </div>
       <CardVehicles />

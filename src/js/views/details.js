@@ -6,7 +6,7 @@ const Details = () => {
   const { store } = useContext(Context);
   const { id } = useParams();
   const item = store.people.find(p => p.url.endsWith(id)) || 
-               store.vehicles.find(v => v.url.endsWith(id)) || 
+               store.starships.find(v => v.url.endsWith(id)) || 
                store.planets.find(pl => pl.url.endsWith(id));
 
   if (!item) return <div>Item not found</div>;

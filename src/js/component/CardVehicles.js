@@ -8,15 +8,15 @@ export const CardVehicles = () => {
   const { store, actions } = useContext(Context);
   const [activeFavorite, setActiveFavorite] = useState({});
 
-  const toggleFavorite = (vehicle) => {
-    if (activeFavorite[vehicle.name]) {
-      actions.removeFavorite(vehicle);
+  const toggleFavorite = (vehicles) => {
+    if (activeFavorite[vehicles.name]) {
+      actions.removeFavorite(vehicles);
     } else {
-      actions.addFavorite(vehicle);
+      actions.addFavorite(vehicles);
     }
     setActiveFavorite((prev) => ({
       ...prev,
-      [vehicle.name]: !prev[vehicle.name],
+      [vehicles.name]: !prev[vehicles.name],
     }));
   };
 
@@ -26,22 +26,24 @@ export const CardVehicles = () => {
 
   return (
     <div className="d-flex overflow-auto" style={{ whiteSpace: "nowrap" }}>
-      {store.vehicles.map((vehicle, index) => (
-        <div className="card card-vehicles mx-2" key={index} style={{ minWidth: "200px" }}>
+      {store.starships.map((vehicles, index) => (
+        <div className="card card-vehicless mx-2" key={index} style={{ minWidth: "200px" }}>
           <img
-            src={`https://starwars-visualguide.com/assets/img/vehicles/${extractId(vehicle.url)}.jpg`}
+            src={`https://starwars-visualguide.com/assets/img/starships/${extractId(vehicles.url)}.jpg`}
             className="card-img-top"
-            alt={vehicle.name}
+            alt={vehicles.name}
           />
           <div className="card-body">
-            <h5 className="card-title">{vehicle.name}</h5>
+            <h5 className="card-title">{vehicles.name}</h5>
+            <h5 className="card-title">{vehicles.passengers}</h5>
+            <h5 className="card-title">{vehicles.model}</h5>
             <button
-              className={`favorite-button ${activeFavorite[vehicle.name] ? "active" : ""}`}
-              onClick={() => toggleFavorite(vehicle)}
+              className={`favorite-button ${activeFavorite[vehicles.name] ? "active" : ""}`}
+              onClick={() => toggleFavorite(vehicles)}
             >
               <i className="fas fa-heart"></i>
             </button>
-            <Link to={`/details/vehicles/${extractId(vehicle.url)}`} className="btn btn-primary mt-2">
+            <Link to={`/details/vehicless/${extractId(vehicles.url)}`} className="btn btn-primary mt-2">
               View Details
             </Link>
           </div>

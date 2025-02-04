@@ -19,8 +19,8 @@ const FavoritesView = () => {
                 src={`https://starwars-visualguide.com/assets/img/${
                   store.people.find((person) => person.name === item.name)
                     ? "characters"
-                    : store.vehicles.find((vehicle) => vehicle.name === item.name)
-                    ? "vehicles"
+                    : store.starships.find((vehicles) => vehicles.name === item.name)
+                    ? "starships"
                     : "planets"
                 }/${index + 1}.jpg`}
                 className="card-img-top"

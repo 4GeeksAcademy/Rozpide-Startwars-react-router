@@ -51,7 +51,7 @@ export const NewDetails = () => {
               <p className="card-text">Terrain: {details.terrain}</p>
             </>
           )}
-          {category === 'vehicles' && (
+          {category === 'starships' && (
             <>
               <p className="card-text">Model: {details.model}</p>
               <p className="card-text">Manufacturer: {details.manufacturer}</p>

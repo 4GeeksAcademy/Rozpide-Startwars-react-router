@@ -6,7 +6,7 @@ const DetailView = () => {
   const { store } = useContext(Context);
   const { name } = useParams();
   const person = store.people.find(p => p.name === name);
-  const vehicle = store.vehicles.find(v => v.name === name);
+  const vehicle = store.starships.find(v => v.name === name);
   const planet = store.planets.find(pl => pl.name === name);
 
   const item = person || vehicle || planet;
