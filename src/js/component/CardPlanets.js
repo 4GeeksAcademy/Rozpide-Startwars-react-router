@@ -83,6 +83,8 @@ export const CardPlanets = () => {
           />
           <div className="card-body">
             <h5 className="card-title">{planet.name}</h5>
+            <h5 className="card-title">Population: {planet.population}</h5>
+            <h5 className="card-title">Terrain: {planet.terrain}</h5>
             <button
               className={`favorite-button ${activeFavorite[planet.name] ? "active" : ""}`}
               onClick={() => toggleFavorite(planet)}
