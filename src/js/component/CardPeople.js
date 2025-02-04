@@ -83,6 +83,9 @@ export const CardPeople = () => {
           />
           <div className="card-body">
             <h5 className="card-title">{person.name}</h5>
+            <h5 className="card-title">Gender: {person.gender}</h5>
+            <h5 className="card-title">Hair Color: {person.hair_color}</h5>
+            <h5 className="card-title">Eye Color: {person.eye_color}</h5>
             <button
               className={`favorite-button ${activeFavorite[person.name] ? "active" : ""}`}
               onClick={() => toggleFavorite(person)}
