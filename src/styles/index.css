@@ -1,113 +1,49 @@
-/* General Styles */
-/*----------------------------------------*/
-/*
+
 .favorite-button {
   border: 2px solid yellow;
   background-color: white;
-  color: yellow;
-  border-radius: 10%;
-  padding: 5px;
+  color: rgb(203, 237, 11);
+  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-.favorite-button .fas {
+
+.favorite-button i {
   color: yellow;
+  padding: 5px; /* Espaciado interno para el ícono */
 }
+
+.favorite-button:hover,
+.favorite-button:active,
 .favorite-button.active {
   background-color: yellow;
-  border: 2px solid gray;
-  color: gray;
-}
-.favorite-button.active .fas {
-  color: gray;
 }
 
-
-.favorites-dropdown {
-  position: relative;
-  display: inline-block;
-}
-.favorites-dropdown .btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.favorites-dropdown .dropdown-toggle {
-  margin-left: 2px;
-  position: relative;
-  z-index: 1;
-}
-.favorites-dropdown .dropdown-toggle::before,
-.favorites-dropdown .dropdown-toggle::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 8px solid black;
-  margin-left: 8px;
-}
-.favorites-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-top: 5px;
-  right: 0; 
-}
-.favorites-dropdown:hover .favorites-dropdown-content,
-.favorites-dropdown-content.show {
-  display: block;
-}
-.favorites-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  cursor: default;
-}
-.favorites-dropdown-content a:hover {
-  background-color: #e50707;
+.favorite-button:hover i,
+.favorite-button:active i,
+.favorite-button.active i {
+  color: grey;
 }
 
-
-.trash-icon {
-  cursor: pointer;
-  margin-left: 10px;
-  color: red;
-}
-*/
-/*----------------------------------------*/
-/* General Styles */
-.favorite-button {
-  border: 2px solid yellow;
-  background-color: white;
+.favorite-button i::before {
+  content: "\f004"; /* Código Unicode del ícono de corazón */
+  font-family: FontAwesome;
   color: yellow;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background-color: transparent; /* Fondo transparente para el contorno */
 }
-.favorite-button .fas {
-  color: yellow;
-}
-.favorite-button.active {
-  background-color: yellow;
-  border: 2px solid gray;
-  color: gray;
-}
-.favorite-button.active .fas {
-  color: gray;
+
+.favorite-button:hover i::before,
+.favorite-button:active i::before,
+.favorite-button.active i::before {
+  color: grey; /* Cambiar el color del corazón */
+  background-color: transparent; /* Fondo transparente para el contorno */
 }
 
 /* Favorites Dropdown */
 .favorites-dropdown {
   position: fixed; /* Mantener fijo el botón de favoritos */
-  top: 10px; /* Ajustar según la posición deseada */
-  right: 10px; /* Ajustar según la posición deseada */
+  top: 25px; /* Ajustar según la posición deseada */
+  right: 150px; /* Ajustar según la posición deseada */
   z-index: 1000; /* Asegurarse de que se superponga a otros elementos */
 }
 
@@ -123,9 +59,8 @@
   z-index: 1;
 }
 
-
 .favorites-dropdown .dropdown-toggle::after {
-  content:initial;  /* Evitar mostrar los pseudo-elementos */
+  content: initial; /* Evitar mostrar los pseudo-elementos */
 }
 
 .favorites-dropdown-content {
@@ -133,9 +68,9 @@
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 10px;
   right: 4; /* Alinear el desplegable a la derecha */
 }
 
@@ -166,7 +101,7 @@
 /* Cards Styles */
 .card-container {
   display: flex;
-  overflow-x:auto; /* Permitir desplazamiento horizontal */
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
   white-space: nowrap;
   padding: 20px 0;
 }
