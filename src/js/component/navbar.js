@@ -1,45 +1,7 @@
-/*import React from "react";
-import { Link } from "react-router-dom";
-
-export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
-	);
-};*/
-/*----------------------------------------------*/
-/*import React from "react";
-import { Link } from "react-router-dom";
-import { Favorites } from "../views/favorites"; // Importamos el componente Favorites
-import { BotonToDemo } from "./botonToDemo";
-
-export const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-3">
-		
-      <div className="container-fluid">
-        <Link to="/">
-          <span className="navbar-brand mb-0 h1">React Boilerplate</span>
-        </Link>
-        <div className="ml-auto d-flex align-items-center">
-         <BotonToDemo /> 
-          <Favorites />
-        </div>
-      </div>
-    </nav>
-  );
-};*/
 import React from "react";
 import { Link } from "react-router-dom";
 import { Favorites } from "../views/favorites"; // Importamos el componente Favorites
+import SearchBar from "./searchBar";// Importamos el componente SearchBar para poder utilizarlo en el Navbar
 
 export const Navbar = () => {
   return (
@@ -59,8 +21,11 @@ export const Navbar = () => {
             Check the Context in action
           </Link>
         </div>*/}
+        <SearchBar />
+        
         <Favorites />
       </div>
+      
     </nav>
   );
 };

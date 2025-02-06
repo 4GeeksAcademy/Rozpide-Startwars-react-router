@@ -37,7 +37,7 @@ export const CardPeople = () => {
             <h5 className="card-title">{person.name}</h5>
             
 
-            <div class="d-flex justify-content-between me-3">
+            <div className="d-flex justify-content-between me-3">
               <Link
                 to={`/details/people/${person.url.split("/").slice(-2, -1)[0]}`}
                 className="btn btn-primary mt-2 ms-2"
@@ -50,7 +50,7 @@ export const CardPeople = () => {
                 }me-3`}
                 onClick={() => toggleFavorite(person)}
               >
-                <i class="fa-regular fa-heart"></i>
+                <i className="fa-regular fa-heart"></i>
               </button>
               
             </div>
